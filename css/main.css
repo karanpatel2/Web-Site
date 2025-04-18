@@ -1,0 +1,389 @@
+:root {
+  --main-background-color: #FFFFFF;
+  --main-headline-color: #1f1235;
+  --main-paragraph-color: #1b1425;
+  --main-button-color: #ff9795;
+  --main-button-text-color: #1f1235;
+
+  --sec-bg-color: #f4effc;
+  --sec-headline-color: #1f1135;
+  --sec-subheadline-color: #1b1325;
+  --sec-card-bg-color: #e2daeb;
+  --sec-card-headline-color: #1f1135;
+  --sec-card-paragraph-color: #1b1325;
+
+  --prj-bg-color: #FFFFFF;
+  --prj-headline-color: #1f1235;
+  --prj-subheadline-color: #1b1425;
+  --prj-card-bg-color: #301e4e;
+  --prj-card-headline-color: #ffffff;
+  --prj-card-paragraph-color: #f4f0fc;
+  --prj-card-text-highlight-color: #ff9795;
+  --prj-card-tag-bg-color: #4c346b;
+  --prj-card-tag-text: #FFFFFF;
+
+  --abt-bg-color: #301e4e;
+  --abt-headline-color: #FFFFFF;
+  --abt-para-color: #c9bae2;
+  --abt-link-color: #ff9795;
+
+  --edu-bg-color: #463366;
+}
+
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: proxima-nova, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  scroll-margin-top: 2rem;
+}
+
+/* Additional utility styles */
+.container-narrow {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.hover-effect {
+  transition: transform 0.18s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--main-button-color) !important;
+  color: var(--main-button-text-color) !important;
+  border-color: var(--main-button-color) !important;
+}
+
+/* Header */
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-decoration: none;
+}
+
+.nav-link {
+  font-weight: 700;
+  color: var(--abt-bg-color) !important;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.active .nav-link {
+  color: var(--prj-card-bg-color) !important;
+}
+
+.social-nav .nav-link {
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+}
+
+.social-nav .social-icon-link {
+  font-weight: 700;
+  color: var(--prj-card-tag-bg-color) !important;
+  transition: all 0.3s;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+.social-nav .social-icon-link:hover,
+.social-nav .social-icon-link:focus,
+.social-nav .social-icon-link:active {
+  color: var(--prj-card-bg-color) !important;
+}
+
+#top {
+  background-color: var(--main-background-color);
+  background-image: url(../images/circle-scatter-haikei.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#top .intro-title {
+  font-weight: 700;
+  color: var(--main-headline-color);
+}
+
+#top p {
+  color: var(--main-paragraph-color);
+}
+
+#top .btn-secondary {
+  background-color: var(--prj-card-bg-color);
+  color: var(--prj-card-paragraph-color);
+  outline: none;
+}
+
+#top #img-wrapper {
+  background-color: var(--sec-card-bg-color);
+  border-radius: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+#about {
+  background-color: var(--abt-bg-color);
+}
+
+#about h2 {
+  color: var(--abt-headline-color);
+}
+
+#about p {
+  color: var(--abt-para-color);
+}
+
+
+
+#skills {
+  background-color: var(--sec-bg-color) !important;
+}
+
+#skills h2 {
+  color: var(--sec-headline-color);
+}
+
+#skills p {
+  color: var(--sec-subheadline-color);
+}
+
+#skills .card-container {
+  background-color: var(--sec-card-bg-color);
+}
+
+#education {
+  background-color: var(--abt-bg-color) !important;
+}
+
+#education .timeline-wrapper {
+  position: relative;
+  padding: 22px 0;
+}
+
+#education .timeline-wrapper:last-child:before {
+  height: 0;
+}
+
+#education .timeline-wrapper:before {
+  content: "";
+  background: var(--sec-card-bg-color);
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 38px;
+}
+
+#education .timeline-yr {
+  background: var(--abt-para-color);
+  color: var(--main-button-text-color);
+  border-radius: 100%;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+}
+
+#education .timeline-yr span {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  line-height: 75px;
+}
+
+#education h2 {
+  color: var(--abt-headline-color);
+}
+
+#education .h6 {
+  font-weight: normal;
+}
+
+#education .timeline-info {
+  color: var(--prj-card-paragraph-color);
+  display: inline-block;
+  vertical-align: top;
+  /* max-width: 432px; */
+  margin-left: 6em;
+}
+
+#education .timeline-info small {
+  color: var(--abt-link-color) !important;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  font-weight: normal;
+}
+
+
+#projects .card-img-top {
+  height: 250px;
+  width: auto;
+  border-radius: 0;
+}
+
+#projects {
+  background-color: var(--sec-bg-color) !important;
+}
+
+#projects .card {
+  background-color: var(--prj-card-bg-color) !important;
+  border-radius: 0 !important;
+}
+
+#projects h2 {
+  color: var(--prj-headline-color) !important;
+}
+
+#projects .card-title {
+  color: var(--prj-card-headline-color) !important;
+}
+
+#projects span,
+#projects p {
+  color: var(--prj-card-paragraph-color) !important;
+}
+
+#projects .btn-secondary {
+  background-color: var(--main-button-color);
+  color: var(--main-button-text-color);
+  outline: none;
+  border: none;
+}
+
+#projects .tags span {
+  font-size: 0.8rem;
+  background-color: var(--prj-card-tag-bg-color);
+  color: var(--prj-card-tag-text);
+}
+
+#projects .bg-light {
+  background-color: var(--sec-card-bg-color) !important;
+}
+
+#projects .set-image {
+  height: 100%;
+}
+
+#contact h2 {
+  color: var(--prj-headline-color) !important;
+}
+
+#contact p {
+  color: var(--prj-subheadline-color);
+  font-weight: 620;
+}
+
+#contact .small-text{
+  color: var(--prj-card-tag-bg-color) !important;
+}
+
+.marker {
+  position: relative;
+  display: inline;
+  width: auto;
+}
+
+.marker-center {
+  padding-right: 0;
+}
+
+.marker:after {
+  content: "";
+  width: 125px;
+  height: 30px;
+  position: absolute;
+  bottom: -25px;
+  right: -30px;
+  background-image: url("../images/marker.svg");
+  background-repeat: no-repeat;
+}
+
+.marker-center:after {
+  bottom: -30px;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/* Scroll Top */
+#scroll-top {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#scroll-top .btn {
+  padding: 3px 11px;
+  border-radius: 50%;
+}
+
+/* Footer section */
+footer {
+  background-color: var(--prj-card-bg-color);
+  color: var(--abt-para-color);
+}
+
+footer a:not(.nav-link) {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (min-width: 48em) {
+  .site-title {
+    float: left;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .marker {
+    padding-right: 0;
+  }
+
+  .marker:after {
+    bottom: -30px;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  #contact #email {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (min-width: 991px) {
+  #top {
+    padding: 180px 0;
+  }
+}
+
+@media (max-width: 991px) {
+  #top {
+    background-image: none;
+  }
+}
